@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+    <head>
+        <title>Malte Hoffmann &#183; Brain imaging AI &#183; Harvard Medical School</title>
+        <meta charset="utf-8"></meta>
+        <meta name="description" content="Malte Hoffmann develops AI tools for brain segmentation and registration that generalize to new image types. His tools include SynthStrip, SynthMorph, BabySeg."></meta>
+        <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+        <link rel="stylesheet" href="style.css"></link>
+        <link rel="icon" href="images/favicon.png"></link>
+    </head>
+    <body>
+
+        <a href="https://malte.cz" id="banner"></a>
+        <ul id="menu">
+            <li><a href="#about">About</a></li>
+            <li><a href="#software">Software</a></li>
+            <li><a href="#papers">Publications</a></li>
+            <li><a href="#people">People</a></li>
+            <li><a href="#visiting">Visiting</a></li>
+            <li><a href="#awards">Awards</a></li>
+            <li><a href="#address">Address</a></li>
+        </ul>
+        <img src="images/portrait.jpg" alt="Malte Hoffmann" id="portrait"></img>
+
+
+        <h1 id="about">Malte Hoffmann<a href="#">&#11023;</a></h1>
+        <p>
+            Assistant Professor of Radiology, Harvard Medical School<br></br>
+            Investigator, Massachusetts General Hospital
+        </p>
+        <ul id="contact">
+            <li><a href="contact/" rel="nofollow" id="email">E&#x6D;ail</a></li>
+            <li><a href="https://scholar.google.com/citations?user=ew8CGvEAAAAJ">Google Scholar</a></li>
+            <li><a href="https://github.com/mu40/">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/maltehoffmann/">LinkedIn</a></li>
+            <!--
+            <li><a href="https://www.martinos.org/faculty/hoffmann-malte/">Martinos Center</a></li>
+            <li><a href="https://lcn.martinos.org/people/mhoffmann/">LCN</a></li>
+            <li><a href="https://researchers.mgh.harvard.edu/profile/16339571">MGRI</a></li>
+            <li><a href="https://connects.catalyst.harvard.edu/profiles/display/83030628">Harvard Catalyst</a></li>
+            -->
+        </ul>
+        <script>
+        //<![CDATA[
+        (function () {
+            var a = document.getElementById('email');
+
+            function reveal() {
+                a.setAttribute('href', 'nbjmup;nipggnbooAnhi/ibswbse/fev'.replace(/./g, function (c) {
+                    return String.fromCharCode(c.charCodeAt(0) - 1);
+                }));
+            }
+
+            a.onmouseover = a.onfocus = a.onpointerdown = a.onclick = reveal;
+        }());
+        //]]>
+        </script>
+        <p><b>Brain imaging AI that works on any scan, out of the box</b></p>
+        <p>
+            We develop deep-learning methods for brain segmentation and
+            registration, which delineate anatomy and align it across images.
+            Imaging AI often fails on unseen image types. We train models on
+            wildly varied synthetic data so they work on new image types
+            without retraining. Our tools are standard components of
+            FreeSurfer, widely used brain MRI software developed at the
+            Martinos Center for Biomedical Imaging.
+        </p>
+        <p>
+            I have advised companies building imaging AI on model robustness,
+            segmentation, and registration. We also welcome sponsored research
+            partnerships, for example to adapt our tools to new applications.
+        </p>
+
+
+        <h1 id="software">Software<a href="#">&#11023;</a></h1>
+        <ul>
+            <li>
+                <h2>SynthStrip</h2>
+                <p>Skull-stripping for any brain image, with a dataset of brain masks for 622 MRI, CT, and PET scans</p>
+                <ul class="links">
+                    <li><a href="https://synthstrip.io">synthstrip.io</a></li>
+                    <li><a href="https://hub.docker.com/r/freesurfer/synthstrip">28k+ Docker pulls</a></li>
+                    <li>Default in <a href="https://surfer.nmr.mgh.harvard.edu/">FreeSurfer</a> and <a href="https://surfer.nmr.mgh.harvard.edu/fswiki/infantFS">Infant FreeSurfer</a></li>
+                </ul>
+            </li>
+            <li>
+                <h2>SynthMorph</h2>
+                <p>Rigid, affine, and deformable brain registration across scan types, without preprocessing</p>
+                <ul class="links">
+                    <li><a href="https://synthmorph.io">synthmorph.io</a></li>
+                    <li><a href="https://hub.docker.com/r/freesurfer/synthmorph">12k+ Docker pulls</a></li>
+                    <li>Default in <a href="https://surfer.nmr.mgh.harvard.edu/">FreeSurfer</a></li>
+                </ul>
+            </li>
+            <li>
+                <h2>BabySeg</h2>
+                <p>Brain segmentation for infants and young children from one or more MRIs of variable resolution and type</p>
+                <ul class="links">
+                    <li><a href="https://babyseg.io">babyseg.io</a></li>
+                    <li><a href="https://hub.docker.com/r/freesurfer/babyseg">8k+ Docker pulls</a></li>
+                    <li>New in <a href="https://surfer.nmr.mgh.harvard.edu/fswiki/infantFS">Infant FreeSurfer</a></li>
+                </ul>
+            </li>
+        </ul>
+
+
+        <h1 id="papers">Publications<a href="#">&#11023;</a></h1>
+        <p>
+            A selection of our work, starting with a practical guide to the
+            idea behind our tools: training networks on synthetic data so they
+            work on any brain scan. A complete list is on
+            <a href="https://scholar.google.com/citations?user=ew8CGvEAAAAJ">Google Scholar</a>.
+            Asterisks indicate equal contribution.
+        </p>
+        <ul>
+            <li>
+                <p>
+                    <a href="https://doi.org/10.1109/MSP.2025.3590806">Domain-randomized deep learning for neuroimage analysis</a>
+                    (<a class="eprint" href="https://arxiv.org/abs/2507.13458">arXiv</a>,
+                    <a class="eprint" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12646568/">PMC</a>)
+                </p>
+                <p><b>Hoffmann M</b></p>
+                <p>IEEE Signal Processing Magazine (SPM), 42 (4), pp 78-90, 2025</p>
+            </li>
+            <li>
+                <p>
+                    <a href="https://doi.org/10.1109/TMI.2021.3116879">SynthMorph: learning contrast-invariant registration without acquired images</a>
+                    (<a class="eprint" href="https://arxiv.org/abs/2004.10282">arXiv</a>,
+                    <a class="eprint" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8891043/">PMC</a>)
+                </p>
+                <p><b>Hoffmann M</b>, Billot B, Greve DN, Iglesias JE, Fischl B, Dalca AV</p>
+                <p>IEEE Transactions on Medical Imaging (TMI), 41 (3), pp 543-558, 2022</p>
+            </li>
+            <li>
+                <p>
+                    <a href="https://doi.org/10.1162/imag_a_00197">Anatomy-aware and acquisition-agnostic joint registration with SynthMorph</a>
+                    (<a class="eprint" href="https://arxiv.org/abs/2301.11329">arXiv</a>,
+                    <a class="eprint" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11247402/">PMC</a>)
+                </p>
+                <p><b>Hoffmann M</b>, Hoopes A, Greve DN, Fischl B*, Dalca AV*</p>
+                <p>Imaging Neuroscience, 2, pp 1-33, 2024</p>
+            </li>
+            <li>
+                <p>
+                    <a href="https://doi.org/10.1016/j.neuroimage.2022.119474">SynthStrip: skull-stripping for any brain image</a>
+                    (<a class="eprint" href="https://arxiv.org/abs/2203.09974">arXiv</a>,
+                    <a class="eprint" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9465771/">PMC</a>)
+                </p>
+                <p>Hoopes A, Mora JS, Dalca AV, Fischl B*, <b>Hoffmann M</b>*</p>
+                <p>NeuroImage, 260, p 119474, 2022</p>
+            </li>
+            <li>
+                <p>
+                    <a href="https://doi.org/10.1109/IEEECONF67917.2025.11443909">Deep infant brain segmentation from multi-contrast MRI</a>
+                    (<a class="eprint" href="https://arxiv.org/abs/2512.05114">arXiv</a>,
+                    <a class="eprint" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC13056235/">PMC</a>)
+                </p>
+                <p><b>Hoffmann M</b>, Z&#246;llei L*, Dalca AV*</p>
+                <p>Asilomar Conference on Signals, Systems, and Computers (ACSSC), pp 974-981, 2026</p>
+            </li>
+            <li>
+                <p>
+                    <a href="https://papers.miccai.org/miccai-2026-sat/SASHIMI_037.html">DisMorph: learning to disentangle technical distortions from true biological change</a>
+                    (<a class="eprint" href="https://arxiv.org/abs/2608.08173">arXiv</a>)
+                </p>
+                <p>Fu J, Larson KE, Greve DN, Fischl B*, <b>Hoffmann M</b>*</p>
+                <p>MICCAI Workshop on Simulation and Synthesis in Medical Imaging (SASHIMI), in press, 2026</p>
+            </li>
+        </ul>
+
+
+        <h1 id="people">Team<a href="#">&#11023;</a></h1>
+        <ul class="team">
+            <li>
+                <a href="#about">
+                    <img src="images/team.malte.jpg" alt="Malte Hoffmann"></img>
+                    <p>Malte Hoffmann</p>
+                </a>
+                <p>Assistant Professor</p>
+            </li>
+            <li>
+                <a href="https://scholar.google.com/citations?user=KtUMfZ4AAAAJ">
+                    <img src="images/team.jingru.jpg" alt="Jingru Fu"></img>
+                    <p>Jingru Fu</p>
+                </a>
+                <p>Postdoctoral Fellow</p>
+            </li>
+            <li>
+                <a href="https://jiaoyining.github.io/">
+                    <img src="images/team.yining.jpg" alt="Yining Jiao"></img>
+                    <p>Yining Jiao</p>
+                </a>
+                <p>Postdoctoral Fellow</p>
+            </li>
+            <li>
+                <a href="https://scholar.google.com/citations?user=_mD5n_UAAAAJ">
+                    <img src="images/team.junho.jpg" alt="Junho Moon"></img>
+                    <p>Junho Moon</p>
+                </a>
+                <p>Visiting PhD Student</p>
+            </li>
+        </ul>
+
+
+        <h1 id="alumni">Alumni<a href="#">&#11023;</a></h1>
+        <ul>
+            <li>
+                <p><a href="https://openreview.net/profile?id=~Eason_Ni1">Eason Ni</a></p>
+                <p>2026 Visiting High School Student, Choate Rosemary Hall</p>
+            </li>
+            <li>
+                <p><a href="https://bellaspecktor.github.io/">Bella Specktor Fadida</a></p>
+                <p>2023-2025 Remote Postdoctoral Researcher</p>
+                <p>Next: Assistant Professor, University of Haifa</p>
+            </li>
+            <li>
+                <p><a href="https://dadashkarimi.github.io/">Javid Dadashkarimi</a></p>
+                <p>2023-2024 Postdoctoral Fellow</p>
+                <p>Next: Postdoctoral Researcher, University of Pennsylvania</p>
+            </li>
+            <li>
+                <p><a href="https://www.linkedin.com/in/will-kelley-b3839b317">Will Kelley</a></p>
+                <p>2023-2024 Research Technician, co-supervised with Lilla Z&#246;llei</p>
+                <p>Next: Data Analyst, Mass General Brigham</p>
+            </li>
+            <li>
+                <p><a href="https://scholar.google.com/citations?user=D37Qv0kAAAAJ">Kinshuk Sharma</a></p>
+                <p>2022 Visiting MSc Student, Northeastern University</p>
+                <p>Next: PhD Student, Indiana University Indianapolis</p>
+            </li>
+        </ul>
+
+
+        <h1 id="visiting">Visiting<a href="#">&#11023;</a></h1>
+        <p>
+            We have hosted graduate students and postdocs leading projects in
+            our group, with support from programs such as
+            <a href="https://wasp-sweden.org/">WASP</a> or
+            <a href="https://www.daad.de/en/">DAAD</a>. To inquire about a stay
+            of at least six months, ideally a year, email a CV and a sentence on
+            what you would like to work on.
+        </p>
+
+
+        <h1 id="awards">Awards<a href="#">&#11023;</a></h1>
+        <ul>
+            <li><p>2026 NIH R21 Trailblazer Award for New and Early Stage Investigators</p></li>
+            <li><p>2020 NIH K99/R00 Pathway to Independence Award</p></li>
+            <li><p>2020, 2021 ISMRM Summa Cum Laude Merit Awards for top-5% abstracts</p></li>
+            <li><p>2019 ISMRM Detection &amp; Correction of Motion in MRI &amp; MRS Study Group Award</p></li>
+            <li><p>2013-2016 Cusanuswerk Graduate Scholarship</p></li>
+        </ul>
+
+
+        <h1 id="training">Training<a href="#">&#11023;</a></h1>
+        <ul>
+            <li>
+                <p>
+                    2017-2022 Postdoctoral Fellow, Radiology
+                    (with
+                    <a href="https://lcn.martinos.org/people/avanderkouwe/">van der Kouwe</a>,
+                    <a href="https://lcn.martinos.org/people/fischl/">Fischl</a>,
+                    <a href="https://www.mit.edu/~adalca/">Dalca</a>)
+                </p>
+                <p>Harvard Medical School, USA</p>
+                <p>Massachusetts General Hospital, USA</p>
+            </li>
+            <li>
+                <p>2013-2017 Doctor of Philosophy (PhD), Motion Correction in MRI</p>
+                <p>University of Cambridge, UK</p>
+            </li>
+            <li>
+                <p>2011-2012 Master of Advanced Studies (MASt), Experimental and Theoretical Physics</p>
+                <p>University of Cambridge, UK</p>
+            </li>
+            <li>
+                <p>2008-2011 Bachelor's Degree (Licence et Magist&#232;re 1), Fundamental Physics</p>
+                <p>University of Paris XI, France</p>
+            </li>
+        </ul>
+
+
+        <h1 id="address">Address<a href="#">&#11023;</a></h1>
+        <p>
+            Athinoula A. Martinos Center for Biomedical Imaging<br></br>
+            149 13th Street, Suite 2301 // 10071<br></br>
+            Charlestown, MA 02129<br></br>
+            United States
+        </p>
+
+
+        <div id="logos">
+            <a href="https://www.martinos.org/">
+                <img id="spark" src="images/logo.martinos.spark.jpg" alt="Martinos Spark"></img>
+                <img id="martinos" src="images/logo.martinos.text.svg" alt="Athinoula A. Martinos Center for Biomedical Imaging"></img>
+            </a>
+            <a href="https://www.massgeneral.org/"><img src="images/logo.mgh.svg" alt="Massachusetts General Hospital"></img></a>
+            <a href="https://hms.harvard.edu/"><img src="images/logo.hms.svg" alt="Harvard Medical School"></img></a>
+            <a href="https://web.mit.edu/"><img src="images/logo.mit.svg" alt="Massachusetts Institute of Technology"></img></a>
+        </div>
+
+    </body>
+</html>
