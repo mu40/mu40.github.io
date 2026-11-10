@@ -24,7 +24,9 @@ img#portrait {
     top: calc(400px - 200px / 2 - 4px);
     border: 4px solid white;
     border-radius: 50%;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    box-shadow:
+        0 2px 4px 0 rgba(0, 0, 0, 0.2),
+        0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
 a#banner:hover,
@@ -118,7 +120,9 @@ ul.team img {
     margin: 0 auto 1ex;
     border: 2px solid white;
     border-radius: 50%;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    box-shadow:
+        0 2px 4px 0 rgba(0, 0, 0, 0.2),
+        0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
 ul.team a:hover img {
