@@ -28,46 +28,9 @@ img#portrait {
 }
 
 a#banner:hover,
-img#portrait:hover,
-ul.team a:hover img {
+img#portrait:hover {
     filter: brightness(95%);
     opacity: 1;
-}
-
-li {
-    margin-bottom: 2ch;
-    list-style-type: none;
-}
-
-ul#menu {
-    padding: 0 248px 0 20px;
-    width: calc(100% - 248px - 20px);
-    line-height: 2.5;
-}
-
-ul#menu > li {
-    display: inline;
-    padding-right: 3ch;
-}
-
-ul#contact {
-    margin-top: 1em;
-}
-
-ul#contact > li,
-ul.links > li {
-    display: inline;
-}
-
-ul#contact > li::after,
-ul.links > li::after {
-    content: " |";
-    color: lightgray;
-}
-
-ul#contact > li:last-child::after,
-ul.links > li:last-child::after {
-    display: none;
 }
 
 a:link,
@@ -115,11 +78,94 @@ h2 + p {
     margin-top: 0;
 }
 
+li {
+    margin-bottom: 2ch;
+    list-style-type: none;
+}
+
 li > p {
     text-align: left;
     text-indent: -2.5em;
     padding-left: 2.5em;
     margin: 0;
+}
+
+ul.team {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    margin-top: 1.5em;
+}
+
+ul.team > li {
+    width: 180px;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+ul.team a {
+    display: block;
+}
+
+ul.team a:hover {
+    opacity: 1;
+}
+
+ul.team img {
+    display: block;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 1ex;
+    border: 2px solid white;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+ul.team a:hover img {
+    filter: brightness(95%);
+    opacity: 1;
+}
+
+ul.team p {
+    text-align: center;
+    text-indent: 0;
+    padding-left: 0;
+    margin: 0;
+}
+
+ul.team a:hover p {
+    opacity: 0.5;
+}
+
+ul#contact {
+    margin-top: 1em;
+}
+
+ul.links > li,
+ul#contact > li {
+    display: inline;
+}
+
+ul.links > li::after,
+ul#contact > li::after {
+    content: " |";
+    color: lightgray;
+}
+
+ul.links > li:last-child::after,
+ul#contact > li:last-child::after {
+    display: none;
+}
+
+ul#menu {
+    padding: 0 248px 0 20px;
+    width: calc(100% - 248px - 20px);
+    line-height: 2.5;
+}
+
+ul#menu > li {
+    display: inline;
+    padding-right: 3ch;
 }
 
 div#logos {
@@ -156,46 +202,4 @@ div#logos a:hover,
 div#logos a:active {
     filter: grayscale(0%);
     opacity: 1;
-}
-
-ul.team {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2em;
-    margin-top: 1.5em;
-}
-
-ul.team > li {
-    width: 180px;
-    text-align: center;
-    margin-bottom: 0;
-}
-
-ul.team a {
-    display: block;
-}
-
-ul.team a:hover {
-    opacity: 1;
-}
-
-ul.team a:hover p {
-    opacity: 0.5;
-}
-
-ul.team img {
-    display: block;
-    width: 120px;
-    height: 120px;
-    margin: 0 auto 1ex;
-    border: 2px solid white;
-    border-radius: 50%;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-}
-
-ul.team p {
-    text-align: center;
-    text-indent: 0;
-    padding-left: 0;
-    margin: 0;
 }
