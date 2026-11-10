@@ -10,7 +10,7 @@ body {
 }
 
 a#banner {
-    display:block;
+    display: block;
     width: 100%;
     height: 400px;
     background: black url("images/banner.jpg") no-repeat left top;
@@ -128,7 +128,7 @@ div#logos {
     text-align: right;
 }
 
-img#spark{
+img#spark {
     height: 60px;
     margin-top: -45px;
     margin-right: -10px;
