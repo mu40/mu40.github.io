@@ -1,0 +1,3 @@
+djlint
+shellcheck-py
+typos

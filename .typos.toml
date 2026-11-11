@@ -1,0 +1,6 @@
+[default.extend-words]
+Specktor = 'Specktor'
+
+[files]
+ignore-hidden = false
+extend-exclude = ['.git', '.venv', 'images']

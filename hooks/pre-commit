@@ -1,0 +1,59 @@
+#!/bin/sh
+
+# Run the spell checker and linters on every commit. The working directory of
+# this script will be the top level of the Git repository.
+
+set -e
+PATH="${VIRTUAL_ENV:-$PWD/.venv}/bin:$PATH"
+
+
+# Temporary storage.
+d=$(mktemp -d "/tmp/$(basename "$0").XXXXXX")
+trap 'rm -rf -- "$d"' EXIT
+trap exit INT TERM
+
+
+# Identify relevant files. BusyBox's `awk` cannot print null characters.
+list() { git diff -z --staged --name-only --diff-filter=ACMRT -- "$@" ; }
+staged="$d/staged"
+html="$d/html"
+css="$d/css"
+shell="$d/shell"
+list >"$staged"
+list '*.html' '*.htm' '*.xhtml' '*.xht' >"$html"
+list '*.css' >"$css"
+xargs -0r file <"$staged" |
+    awk '/shell script/ { sub(/:[^:]*$/, ""); print }' |
+        tr '\n' '\0' >"$shell"
+
+
+# Copy the staged tree. In case of a partial commit, we want to check the
+# staged files, not the working tree.
+git checkout-index --prefix="$d/tree/" -a
+cd "$d/tree"
+
+
+if [ -s "$staged" ]; then
+    echo "Running spell checker"
+    xargs -0 typos --force-exclude <"$staged"
+fi
+
+if [ -s "$shell" ]; then
+    echo "Running shell linter"
+    xargs -0 shellcheck <"$shell"
+fi
+
+if [ -s "$html" ] || [ -s "$css" ]; then
+    echo "Running HTML and CSS validator"
+    cat "$html" "$css" | xargs -0 vnu --Werror --also-check-css
+fi
+
+if [ -s "$html" ]; then
+    echo "Running HTML linter"
+    xargs -0 djlint <"$html"
+fi
+
+if [ -s "$css" ]; then
+    echo "Running CSS linter"
+    xargs -0 biome check <"$css"
+fi

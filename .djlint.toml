@@ -1,0 +1,5 @@
+# H017: Require self-closing void tags like <br/>, as XHTML needs them closed.
+include = "H017"
+
+# H023: Allow numeric character references like &#183;.
+ignore = "H023"
