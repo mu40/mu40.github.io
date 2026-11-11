@@ -13,7 +13,7 @@ trap 'rm -rf -- "$d"' EXIT
 trap exit INT TERM
 
 
-# Identify relevant files. BusyBox's `awk` cannot print null characters.
+# Identify relevant files.
 list() { git diff -z --staged --name-only --diff-filter=ACMRT -- "$@" ; }
 staged="$d/staged"
 html="$d/html"
@@ -22,15 +22,18 @@ shell="$d/shell"
 list >"$staged"
 list '*.html' '*.htm' '*.xhtml' '*.xht' >"$html"
 list '*.css' >"$css"
-xargs -0r file <"$staged" |
-    awk '/shell script/ { sub(/:[^:]*$/, ""); print }' |
-        tr '\n' '\0' >"$shell"
 
 
 # Copy the staged tree. In case of a partial commit, we want to check the
 # staged files, not the working tree.
 git checkout-index --prefix="$d/tree/" -a
 cd "$d/tree"
+
+
+# Identify shell scripts by content. BusyBox's `awk` cannot print null bytes.
+xargs -0r file <"$staged" |
+    awk '/shell script/ { sub(/:[^:]*$/, ""); print }' |
+        tr '\n' '\0' >"$shell"
 
 
 if [ -s "$staged" ]; then
