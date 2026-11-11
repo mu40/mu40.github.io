@@ -53,7 +53,7 @@ fi
 
 if [ -s "$html" ]; then
     echo "Running HTML linter"
-    xargs -0 djlint <"$html"
+    xargs -0 djlint --quiet <"$html"
 fi
 
 if [ -s "$css" ]; then
