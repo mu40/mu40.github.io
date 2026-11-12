@@ -6,16 +6,11 @@ set -e
 cd "$(dirname "$0")"
 venv_dir='.venv'
 github='https://github.com'
+python="${1:-python3}"
 
 
 # Virtual environment.
 if ! "$venv_dir/bin/python" -c 'import pip' 2>/dev/null; then
-    python=$(
-        find /usr/bin/ /usr/local/bin/ -name 'python*' 2>/dev/null |
-        sed -n 's|.*/\(python[0-9.]*\)$|\1|p' |
-        sort -V |
-        tail -n1
-    )
     "$python" -m venv --clear "$venv_dir"
     "$venv_dir/bin/python" -m pip install -U pip
 fi
